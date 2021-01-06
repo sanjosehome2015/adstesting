@@ -1,0 +1,24 @@
+
+# Temperature
+Temperature#concept.label = temperature
+Temperature.cold#instance.label = cold
+Temperature.hot#instance.label = hot
+Temperature.warm#instance.label = warm
+
+# Weather
+Weather#concept.label = weather
+Weather.Weather(Temperature,java.lang.Long,boolean)#phrase.navigation = a new {weather} where {0, temperature} {1, rain forest} {2, storm alert}
+Weather.newAttribute#phrase.action = set the temperature of {this} to {temperature}
+Weather.newAttribute#phrase.clearer = clear the temperature of {this}
+Weather.newAttribute#phrase.navigation = {temperature} of {this}
+Weather.newAttribute1#phrase.action = set the rain forest of {this} to {rain forest}
+Weather.newAttribute1#phrase.addition_setter = add {rain forest} to the rain forest of {this}
+Weather.newAttribute1#phrase.navigation = {rain forest} of {this}
+Weather.newAttribute1#phrase.subtraction_setter = subtract {rain forest} from the rain forest of {this}
+Weather.newAttribute2#phrase.action[0] = {this} gets storm alert only if {storm alert}
+Weather.newAttribute2#phrase.action[1] = make it {storm alert} that {this} is storm alert
+Weather.newAttribute2#phrase.action[1].deprecated = true
+Weather.newAttribute2#phrase.navigation = {this} is storm alert
+Weather.newAttribute2#phrase.negative_predicate = {this} is not storm alert
+Weather.newAttribute2#phrase.negative_predicate_setter = {this} does not get storm alert
+Weather.newAttribute2#phrase.positive_predicate_setter = {this} gets storm alert
